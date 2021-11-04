@@ -47,9 +47,7 @@ Une fois le fichier ouvert cliqué sur *Run App* (en haut au centre). Le fichier
 
 ### Nettoyage des données et les fonctions
 
-### Génération du dashboard 
-
-### L'exécution complète du dashboard
+### L'exécution du dashboard
 
 ## Rapport d'analyse 
 
