@@ -5,7 +5,7 @@
 ###########################################################################################################################
 
 if (require("tidyverse")) {     # Vérification si le package est déjà instalé 
-  library(tidyverse)            # Si tel est le cas nous le chargeons
+  library(tidyverse)            # Si tel est le cas nous le chargeon
 } else {
   install.packages("tidyverse") # Sinon nous le téléchargeons
   library(tidyverse)            # Puis nous le chargeons
