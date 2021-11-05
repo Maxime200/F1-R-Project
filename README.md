@@ -30,7 +30,7 @@ Bien entendu, vous n'êtes pas obligé d'avoir anaconda sur votre machine. Il es
 
 - Sous linux [R](https://cran.r-project.org/bin/linux/) et [Rstudio](https://rstudio.com/products/rstudio/download/ ).  
 
-Lorsque vous êtes assurés que RSrudio est bien installé dans votre environnement de travail vous n'avez plus qu'a télécharger le projet (conteneant le *F1_dataviz_r.r*, le *kaggle.json*, et le README.md) et à le dézipper. Il vous suffit maintenant de lancer RStudio et et d'aller dans :
+Lorsque vous êtes assurés que RSrudio est bien installé dans votre environnement de travail vous n'avez plus qu'a télécharger le projet (conteneant le "*global.r*", le "*server.r*", le "*ui.r*", le "*kaggle.json*", et le "*README.md*") et à le dézipper. Il vous suffit maintenant de lancer RStudio et et d'aller dans :
 
 - File (dans le coin en haut à gauche)
   - Open File (troisième ligne)'
@@ -65,10 +65,10 @@ Chaque graphe sera donc créé par un traitemment de données et d'une fonction.
 
 ### L'exécution du dashboard
 
-Pour finir, la partie IV du code consiste à créer le dashboard shiny en 3 etape : 
+Pour finir, la partie IV du code consiste à créer le dashboard shiny en exécutant 2 autres fichiers : 
  
-- La première portion du code s'ocuppe de l'interface graphique (ui), c'est là que vous pourrez modifier l'interface du dashboard grace au package *shinydashboard*
-- la seconde portion s'occupe des interactions coté serveur (input/output)
+- Le premiers fichier (ui.r) s'ocuppe de l'interface graphique, c'est là que vous pourrez modifier l'interface du dashboard grace au package *shinydashboard*
+- Le second fichier (server.r) s'occupe des interactions coté serveur (input/output)
 - Et la dernière ligne du code permet de lancer le dashboard (shinyApp)
 
 ## Rapport d'analyse 
