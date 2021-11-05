@@ -43,19 +43,41 @@ Une fois le fichier ouvert cliqué sur *Run App* (en haut au centre). Le fichier
 
 ## Développer Guide
 
+Le code a été commenté et divisé en plusieurs parties pour faciliter la compréhension du code.
+
 ### Gérer les packages et les données
+
+La partie I du code concerne dans un premier temps l'instalation des packages necessaires au fonctionemment du code. La structure présente dans le code permet de verifier si les packages sont déjà installés ou non pour eviter de les télécharger de nouveau. Si vous travaillez avec de nouveaux packages, n'hésitez pas à les rajouter en suivant la structure présentée.
+
+Ensuite, la présence des datas est vérifiée, elles seront téléchargées dans le cas contraire. 
 
 ### Nettoyage des données et les fonctions
 
+Dans la partie II nous chargeons simplement le dataset à partir de la fonction read.csv
+
+la partie III traite les modification du code et les fonctions qui seront utilisées dans le dashboard, elles suivent la structure suivante :
+
+- Netoyage et/ou traitemment des données
+- Fonction utilisant les données modifiées
+- et ainsi de suite
+
+Chaque graphe sera donc créé par un traitemment de données et d'une fonction.
+
 ### L'exécution du dashboard
+
+Pour finir, la partie IV du code consiste à créer le dashboard shiny en 3 etape : 
+ 
+- La première portion du code s'ocuppe de l'interface graphique (ui), c'est là que vous pourrez modifier l'interface du dashboard grace au package *shinydashboard*
+- la seconde portion s'occupe des interactions coté serveur (input/output)
+- Et la dernière ligne du code permet de lancer le dashboard (shinyApp)
 
 ## Rapport d'analyse 
 
 Dans ce projet le but était de mettre en évidence des informations à propos de la *F1*. 
 
-Dans un premier temps, nous avons voulu montrer les circuits les plus présents dans le monde de la F1. Nous nous sommes vite rendus compte, grâce à ces graphes, que la F1 est avant tout un sport très européen. La majorité des Grands Prix et des circuits s'y trouve. Et le nombre de course qui ont eux lieu sur chaque circuit est globalement bien plus élevé en Europe que dans le reste du monde.
+Dans un premier temps, nous avons voulu montrer les circuits les plus présents dans le monde de la F1. Nous nous sommes vite rendus compte, grâce à ces graphes, que la F1 est avant tout un sport très européen. La majorité des Grands Prix et des circuits s'y trouve. Et le nombre de courses qui a lieu sur chaque circuit est globalement bien plus élevé en Europe que dans le reste du monde.
 
-Dans un second temps, nous avons voulu faire une comparaison sur les temps de pit-stop pour les plus grandes écurie pour pouvoir les départager sur des critères qui ne sont pas uniquement basés sur des données récoltées sur la piste, mais aussi dans les stands. On s'est aperçu d'une sorte d'homogénéité, mais malgré tout, une différence s'est faite sur l'amplitude des résultats (soit le nombre de fois où une écurie arrivé à faire ce temps).
+Dans un second temps, nous avons voulu faire une comparaison sur les temps de pit-stop pour les plus grandes écuries pour pouvoir les départager sur des critères qui ne sont pas uniquement basés sur des données récoltées sur la piste, mais aussi dans les stands. Nous avons constaté une certaine homogénéité, mais malgré tout, une différence s'est faite sur l'amplitude des résultats (soit le nombre de fois où une écurie arrivé à faire ce temps).
 
 ## Conclusion
 
