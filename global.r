@@ -268,7 +268,7 @@ df_best_pit_stops <- df_pit_stops %>%
   # On filtre pour ne garder que les temps cohérent et les meilleurs constructeurs
   filter(pointsTotal >= 1000 & seconds <= 35)
 
-# Création de la foction traçant les histogrammes
+# Création de la foction traçant les histogramme
 Tracer_histo <- function(data_constructor, color) 
 {
   histo <- ggplot() + 
@@ -286,56 +286,9 @@ Tracer_histo <- function(data_constructor, color)
 #
 ###########################################################################################################################
 
-ui <- dashboardPage(dashboardHeader(title = "Projet F1 DataViz"), # Titre
-                    dashboardSidebar(disable = TRUE),  # Pas de Sidebar
-                    dashboardBody(fluidRow(box(plotlyOutput("circuit", height = 400)),  # Premier panel pour la carte prenant l'output "circuit"
-                                           box(title = "Régions du monde", selectInput("select_circuit",   # SelectBox comme input
-                                                                                       label = "Régions du monde", 
-                                                                                       choices = c("Monde",  # Choix par continent
-                                                                                                   "Europe",
-                                                                                                   "Amérique du Nord",
-                                                                                                   "Amérique du Sud",
-                                                                                                   "Asie", 
-                                                                                                   "Afrique", 
-                                                                                                   "Océanie"), 
-                                                                                       selected = "Monde"))),  # Valeur par default "Monde"
-                                  
-                                  fluidRow(box(plotlyOutput("pit_stop", height = 400)),  # Deuxième panel pour l'a carte'histogramme prenant l'output "pit_stop"
-                                           box(title = "Constructor",  selectInput("select_pit_stop",  # SelectBox comme input
-                                                                                   label = "Constructor", 
-                                                                                   choices = c("McLaren",   # Choix par constructur
-                                                                                               "Williams",
-                                                                                               "Renault",
-                                                                                               "Ferrari",
-                                                                                               "Red Bull", 
-                                                                                               "Force India", 
-                                                                                               "Mercedes"), 
-                                                                                   selected = "McLaren"))))  # Valeur par default "McLaren"
-)
-server <- function(input, output) 
-{
-  output$circuit <- renderPlotly({  # Création de l'output "circuit"
-    args <- switch(input$select_circuit,  # Fonction générée en fonction de l'input choisi
-                   "Monde" = Tracer_carte(df_world, df_circuits, -60, 90, -170, 190, "Carte des circuits de F1 dans le monde"),
-                   "Europe" = Tracer_carte(df_europe, filter(df_circuits, continent=="Europe"), 34, 60, -15, 45, "Carte des circuits de F1 en Europe"),
-                   "Amérique du Nord" = Tracer_carte(df_north_america, filter(df_circuits, continent=="North America" | name=="Donington Park" | name=="Autodromo Nazionale di Monza"), 0, 100, -170, -50, "Carte des circuits de F1 en Amérique du Nord"),
-                   "Amérique du Sud" = Tracer_carte(df_south_america, filter(df_circuits, continent=="South America" | name=="Donington Park" | name=="Autodromo Nazionale di Monza"), -60, 20, -85, -30, "Carte des circuits de F1 en Amérique du Sud"),
-                   "Asie" = Tracer_carte(df_asia, filter(df_circuits, continent=="Asia" | name=="Donington Park" | name=="Autodromo Nazionale di Monza"), -20, 80, 20, 190, "Carte des circuits de F1 en Asie"), 
-                   "Afrique" = Tracer_carte(df_africa, filter(df_circuits, continent=="Africa" | name=="Donington Park" | name=="Autodromo Nazionale di Monza"), -40, 40, -20, 55, "Carte des circuits de F1 en Afrique"), 
-                   "Océanie" = Tracer_carte(df_oceania, filter(df_circuits, continent=="Oceania" | name=="Donington Park" | name=="Autodromo Nazionale di Monza"), -50, -10, 110, 160, "Carte des circuits de F1 en Océanie"))
-  })   
-  
-  output$pit_stop <- renderPlotly({  # Création de l'output "pit_stop"
-    args <- switch(input$select_pit_stop,  # Fonction générée en fonction de l'input choisi
-                   "McLaren" = Tracer_histo(1, "orange"),
-                   "Williams" = Tracer_histo(3, "blue"),
-                   "Renault" = Tracer_histo(4, "yellow"),
-                   "Ferrari" = Tracer_histo(6, "red"),
-                   "Red Bull" = Tracer_histo(9, "white"),
-                   "Force India" = Tracer_histo(10, "pink"),
-                   "Mercedes" = Tracer_histo(131, "grey"))
-  })
-}
+source("ui.R")
+
+source("server.R")
 
 # création du dashboard
 shinyApp(ui = ui, server = server)
