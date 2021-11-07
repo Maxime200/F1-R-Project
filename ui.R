@@ -1,7 +1,8 @@
-ui <- dashboardPage(dashboardHeader(title = "Projet F1 DataViz"), # Titre
+ui <- dashboardPage(skin = "red",
+                    dashboardHeader(title = "Projet F1 DataViz"), # Titre
                     dashboardSidebar(disable = TRUE),  # Pas de Sidebar
                     dashboardBody(fluidRow(box(plotlyOutput("circuit", height = 400)),  # Premier panel pour la carte prenant l'output "circuit"
-                                           box(title = "Régions du monde", selectInput("select_circuit",   # SelectBox comme input
+                                           box(title = "Paramètres de la carte", selectInput("select_circuit",   # SelectBox comme input
                                                                                        label = "Régions du monde", 
                                                                                        choices = c("Monde",  # Choix par continent
                                                                                                    "Europe",
@@ -13,8 +14,8 @@ ui <- dashboardPage(dashboardHeader(title = "Projet F1 DataViz"), # Titre
                                                                                        selected = "Monde"))),  # Valeur par default "Monde"
                                   
                                   fluidRow(box(plotlyOutput("pit_stop", height = 400)),  # Deuxième panel pour l'a carte'histogramme prenant l'output "pit_stop"
-                                           box(title = "Constructor",  selectInput("select_pit_stop",  # SelectBox comme input
-                                                                                   label = "Constructor", 
+                                           box(title = "Paramètres de l'histogramme",  selectInput("select_pit_stop",  # SelectBox comme input
+                                                                                   label = "Constructeur", 
                                                                                    choices = c("McLaren",   # Choix par constructur
                                                                                                "Williams",
                                                                                                "Renault",
