@@ -45,6 +45,13 @@ if (require("maps")) {
   install.packages("maps")
   library(maps)
 }
+  
+if (require("mapproj")) {
+  library(mapproj)
+} else {
+  install.packages("mapproj")
+  library(mapproj)
+}  
 
 if (require("kaggler")) {
   library(kaggler)
