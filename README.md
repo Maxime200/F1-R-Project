@@ -30,11 +30,7 @@ Bien entendu, vous n'êtes pas obligé d'avoir anaconda sur votre machine. Il es
 
 - Sous linux [R](https://cran.r-project.org/bin/linux/) et [Rstudio](https://rstudio.com/products/rstudio/download/ ).  
 
-<<<<<<< HEAD
-Lorsque vous êtes assurés que RSrudio est bien installé dans votre environnement de travail vous n'avez plus qu'a télécharger le projet (conteneant le "*global.r*", le "*server.r*", le "*ui.r*", le "*kaggle.json*", et le "*README.md*") et à le dézipper. Il vous suffit maintenant de lancer RStudio et et d'aller dans :
-=======
 Lorsque vous êtes assurés que RSrudio est bien installé dans votre environnement de travail vous n'avez plus qu'a télécharger le projet (conteneant le "*project R.Rproj*", le "*global.r*", le "*server.r*", le "*ui.r*", le "*kaggle.json*", et le "*README.md*") et à le dézipper. Il vous suffit maintenant de lancer RStudio et et d'aller dans :
->>>>>>> db04e6a67ac4b631d79620f9f4c887820e5fe61e
 
 - File (dans le coin en haut à gauche)
   - Open Project (septième ligne)'
