@@ -1,26 +1,26 @@
 {
-    "id": "0868EF79",
+    "id": "BACDEFA3",
     "path": "C:/Users/maxim/project R/global.r",
     "project_path": "global.r",
     "type": "r_source",
-    "hash": "325008276",
+    "hash": "1238484991",
     "contents": "",
     "dirty": false,
-    "created": 1636197582415.0,
+    "created": 1636283399557.0,
     "source_on_save": false,
     "relative_order": 1,
     "properties": {
         "source_window_id": "",
         "Source": "Source",
-        "cursorPosition": "75,0",
-        "scrollLine": "55"
+        "cursorPosition": "45,14",
+        "scrollLine": "32"
     },
     "folds": "",
-    "lastKnownWriteTime": 1636202399,
+    "lastKnownWriteTime": 1636283469,
     "encoding": "UTF-8",
     "collab_server": "",
     "source_window": "",
-    "last_content_update": 1636202399,
+    "last_content_update": 1636283469324,
     "read_only": false,
     "read_only_alternatives": []
 }
