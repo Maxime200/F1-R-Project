@@ -30,14 +30,13 @@ Bien entendu, vous n'êtes pas obligé d'avoir anaconda sur votre machine. Il es
 
 - Sous linux [R](https://cran.r-project.org/bin/linux/) et [Rstudio](https://rstudio.com/products/rstudio/download/ ).  
 
-Lorsque vous êtes assurés que RSrudio est bien installé dans votre environnement de travail vous n'avez plus qu'a télécharger le projet (conteneant le "*global.r*", le "*server.r*", le "*ui.r*", le "*kaggle.json*", et le "*README.md*") et à le dézipper. Il vous suffit maintenant de lancer RStudio et et d'aller dans :
+Lorsque vous êtes assurés que RSrudio est bien installé dans votre environnement de travail vous n'avez plus qu'a télécharger le projet (conteneant le "*project R.Rproj*", le "*global.r*", le "*server.r*", le "*ui.r*", le "*kaggle.json*", et le "*README.md*") et à le dézipper. Il vous suffit maintenant de lancer RStudio et et d'aller dans :
 
 - File (dans le coin en haut à gauche)
-  - Open File (troisième ligne)'
-  - Selectioner *F1_dataviz_r.r* dans le dossier précédemment dézippé'
+  - Open Project (septième ligne)'
+  - Selectioner "*project R.Rproj*" dans le dossier précédemment dézippé'
 
-- ou Ctrl+O
-  - Selectioner *F1_dataviz_r.r* dans le dossier précédemment dézippé
+Vous pouvez maintenant cliquer sur le fichier "*global.r*" dans la fenêtre inférieur droite pour ouvrir le fichier.
 
 Une fois le fichier ouvert cliqué sur *Run App* (en haut au centre). Le fichier vous installera tous les packages et les données s'ils ne sont pas présent sur votre machine et lancera ensuite le dashboard.
 
